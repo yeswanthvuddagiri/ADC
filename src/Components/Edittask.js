@@ -20,7 +20,7 @@ export default function Edittask() {
         }));
         console.log(data);
       };
-     const{id:edit_taskid} = useParams // get id from url
+     const{id:edit_taskid} = useParams(); // get id from url
         useEffect(() => {
           const api = `https://todo-roan-seven-61.vercel.app/api/get_task_data/${edit_taskid}`;
         axios.get(api).then((response) => {
