@@ -23,7 +23,7 @@ export default function Second() {
       event.preventDefault();
 
       console.log(data)
-      axios.post('http://localhost:5007/api/addtask',data)
+      axios.post('https://todo-roan-seven-61.vercel.app/api/addtask',data)
       .then((response) => {
             console.log(response.data)
             if(response.status===200)
