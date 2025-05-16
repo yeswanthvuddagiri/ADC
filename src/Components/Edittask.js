@@ -1,4 +1,4 @@
-import React from 'react'
+https://todo-roan-seven-61.vercel.appimport React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -22,7 +22,7 @@ export default function Edittask() {
       };
      const{id:edit_taskid} = useParams // get id from url
         useEffect(() => {
-          const api = `http://localhost:5007/api/get_task_data/${edit_taskid}`;
+          const api = `https://todo-roan-seven-61.vercel.app/api/get_task_data/${edit_taskid}`;
         axios.get(api).then((response) => {
             console.log(response.data.task_data)
             setData(response.data.task_data);            
@@ -32,7 +32,7 @@ export default function Edittask() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const api = 'http://localhost:5007/api/edit_task/'+edit_taskid
+    const api = 'https://todo-roan-seven-61.vercel.app/api/edit_task/'+edit_taskid
         axios.put(api,data).then((response) => {
             console.log(response.data)
             if(response.status===200){
