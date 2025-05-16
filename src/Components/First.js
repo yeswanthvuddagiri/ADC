@@ -9,7 +9,7 @@ export default function First() {
     const [list,setList] = useState([{}])
 
    useEffect(()=>{
-      axios.get('http://localhost:5007/api/getTask')
+      axios.get('https://todo-roan-seven-61.vercel.app/api/gettask')
       .then(res => setList(res.data.tas))
    },[])
    
@@ -18,7 +18,7 @@ export default function First() {
  // Delete function
  const handleDelete=(_id)=>{   
     // console.log(_id)
-  axios.delete('http://localhost:5007/api/deletetask/'+_id)
+  axios.delete('https://todo-roan-seven-61.vercel.app/api/deletetask/'+_id)
   .then((response)=>
   {
    if(response.status===200)
